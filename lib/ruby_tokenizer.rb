@@ -14,5 +14,9 @@ module RubyTokenizer
     def filter
       text.downcase.gsub(Patterns.basic, '')
     end
+
+    def tokenize
+      self.filter.scan(/[-\w'’]+/)
+    end
   end
 end

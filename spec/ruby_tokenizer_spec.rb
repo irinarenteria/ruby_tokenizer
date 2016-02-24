@@ -29,4 +29,14 @@ describe RubyTokenizer do
       expect(token.filter).to be == 'searching records is a common requirement in web applications'
     end
   end
+
+  describe "#tokenize" do
+    it "should be an Array" do
+      expect(token.tokenize).to be_a_kind_of Array
+    end
+
+    it "parses string into tokens" do
+      expect(token.tokenize).to be == ["searching", "records", "is", "a", "common", "requirement", "in", "web", "applications"]
+    end
+  end
 end
