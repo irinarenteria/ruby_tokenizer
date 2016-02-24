@@ -45,6 +45,22 @@ describe RubyTokenizer do
   end
 
   describe "#frequency" do
-    pending
+    it "should be a Hash" do
+      expect(token.frequency).to be_a_kind_of Hash
+    end
+
+    it "contains a hash" do
+      expect(token.frequency).to be == {"searching"=>1, "records"=>1, "is"=>1, "a"=>1, "common"=>1, "requirement"=>1, "in"=>1, "web"=>1, "applications"=>1}
+    end
+  end
+
+  describe "#rank" do
+    it "should be an Array" do
+      expect(token.rank).to be_a_kind_of Array
+    end
+
+    it "contains a nested array" do
+      expect(token.rank).to be == [["applications", 1], ["web", 1], ["in", 1], ["requirement", 1], ["common", 1], ["a", 1], ["is", 1], ["records", 1], ["searching", 1]]
+    end
   end
 end

@@ -22,7 +22,9 @@ module RubyTokenizer
     end
 
     def frequency
+      parsed = self.tokenize
+      parsed.each { |word| count[word] += 1}
+      return count
     end
-
   end
 end
