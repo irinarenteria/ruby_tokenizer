@@ -24,5 +24,9 @@ describe RubyTokenizer do
     it "returns a String" do
       expect(token.filter).to be_a_kind_of String
     end
+
+    it "filters tokens" do
+      expect(token.filter).to be == 'searching records is a common requirement in web applications'
+    end
   end
 end
