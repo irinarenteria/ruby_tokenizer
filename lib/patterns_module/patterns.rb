@@ -3,5 +3,5 @@ module Patterns
   PARENS = ['{', '[', '}', ']', '(', ')']
   MISC = ['<', '«', '„', '>', '»', '“', '*']
   CONJUNCTIONS = ['for ', 'and ', 'nor ', 'but ', 'or ', 'yet ', 'so ', 'as ']
-  DETERMINERS = ['the ', 'this ', 'that ', 'i ']
+  DETERMINERS = ['the ', 'this ', 'that ']
 end
