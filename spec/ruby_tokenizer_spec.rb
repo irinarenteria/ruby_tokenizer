@@ -4,13 +4,13 @@ require 'ruby_tokenizer'
 describe RubyTokenizer do
 	let(:token) {RubyTokenizer::Tokenizer.new('Searching records is a common requirement in web applications.')}
 
-	context "#version" do	
+	describe "#version" do	
 		it 'has a version number' do
 			expect(RubyTokenizer::VERSION).not_to be nil
   		end
 	end
 
-  	context "#new" do
+  	describe "#new" do
 		it "takes one parameter and returns a Tokenizer object" do
 			expect(token).to be_an_instance_of RubyTokenizer::Tokenizer
 		end
@@ -19,4 +19,8 @@ describe RubyTokenizer do
 			expect(token.text).to be == 'Searching records is a common requirement in web applications.'
 		end
 	end
+
+  describe "#filter" do
+    pending
+  end
 end

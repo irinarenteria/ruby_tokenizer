@@ -10,5 +10,8 @@ module RubyTokenizer
     def initialize(text)
       @text = text
     end
+
+    def filter(text)
+    end
   end
 end
