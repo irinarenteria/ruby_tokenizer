@@ -1,15 +1,22 @@
 require 'spec_helper'
-
 require 'ruby_tokenizer'
 
 describe RubyTokenizer do
-	let(:token) {RubyTokenizer.new('Searching records is a common requirement in web applications.')}
-  
-  it 'has a version number' do
-    expect(RubyTokenizer::VERSION).not_to be nil
-  end
+	let(:token) {RubyTokenizer::Tokenizer.new('Searching records is a common requirement in web applications.')}
 
-  it 'does something useful' do
-    expect(false).to eq(true)
-  end
+	context "#version" do	
+		it 'has a version number' do
+			expect(RubyTokenizer::VERSION).not_to be nil
+  		end
+	end
+
+  	context "#new" do
+		it "takes one parameter and returns a Tokenizer object" do
+			expect(token).to be_an_instance_of RubyTokenizer::Tokenizer
+		end
+
+		it "contains a String" do
+			expect(token.text).to be == 'Searching records is a common requirement in web applications.'
+		end
+	end
 end

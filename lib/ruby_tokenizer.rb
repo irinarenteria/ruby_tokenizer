@@ -1,5 +1,14 @@
 require "ruby_tokenizer/version"
 
 module RubyTokenizer
-  # Your code goes here...
+
+  class Tokenizer
+  	attr_reader :text
+
+  	def initialize(text)
+  		@text = text
+  	end
+
+  end
+
 end
