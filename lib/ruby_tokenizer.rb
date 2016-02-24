@@ -5,13 +5,14 @@ module RubyTokenizer
 
   class Tokenizer
     include Patterns
-    attr_reader :text
+    attr_accessor :text
 
     def initialize(text)
       @text = text
     end
 
-    def filter(text)
+    def filter
+      text.downcase.gsub(Patterns.basic, '')
     end
   end
 end

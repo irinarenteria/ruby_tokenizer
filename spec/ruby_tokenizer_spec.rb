@@ -21,6 +21,8 @@ describe RubyTokenizer do
 	end
 
   describe "#filter" do
-    pending
+    it "returns a String" do
+      expect(token.filter).to be_a_kind_of String
+    end
   end
 end
