@@ -4,12 +4,11 @@ require "patterns_module/patterns"
 module RubyTokenizer
 
   class Tokenizer
-	include Patterns
+    include Patterns
+    attr_reader :text
 
-  	attr_reader :text
-
-  	def initialize(text)
-  		@text = text
-  	end
+    def initialize(text)
+      @text = text
+    end
   end
 end
