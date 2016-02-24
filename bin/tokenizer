@@ -13,4 +13,5 @@ else
 	text = ARGF.read
 end
 
-puts RubyTokenizer::Tokenizer.new(text)
+string = RubyTokenizer::Tokenizer.new(text)
+puts string.text
