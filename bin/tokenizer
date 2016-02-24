@@ -1,3 +1,16 @@
 #!/usr/bin/env ruby
 
 require 'ruby_tokenizer'
+
+if ARGV.empty?
+	puts "--- Please input your text below ----"
+	text = STDIN.gets
+elsif 
+	ARGV.detect {|input| File.file?(input) == false}
+	puts "Error"
+	exit 2
+else
+	text = ARGF.read
+end
+
+puts RubyTokenizer::Tokenizer.new(text)
