@@ -26,5 +26,10 @@ module RubyTokenizer
       parsed.each { |word| count[word] += 1}
       return count
     end
+
+    def rank
+      ranked = Hash[self.frequency.sort_by {|word, count| count}.reverse]
+      ranked.first(10)
+    end
   end
 end
