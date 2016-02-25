@@ -13,7 +13,7 @@ module RubyTokenizer
     end
 
     def rank
-      ranked = Hash[self.frequency.sort_by {|_word, count| count}.reverse]
+      ranked = Hash[self.frequency.sort_by { |_word, count| count }.reverse]
       ranked.first(10)
     end
 
@@ -26,8 +26,8 @@ module RubyTokenizer
     def frequency
       count = Hash.new(0)
       parsed = self.tokenize
-      parsed.each { |word| count[word] += 1}
-      
+      parsed.each { |word| count[word] += 1 }
+
       return count
     end
 
