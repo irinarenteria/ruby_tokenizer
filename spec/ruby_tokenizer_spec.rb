@@ -3,6 +3,7 @@ require 'ruby_tokenizer'
 
 describe RubyTokenizer do
 	let(:token) {RubyTokenizer::Tokenizer.new('Searching records is a common requirement in web applications.')}
+  RubyTokenizer::Tokenizer.send(:public, *RubyTokenizer::Tokenizer.protected_instance_methods) 
 
 	describe "#version" do	
 		it 'has a version number' do
@@ -18,13 +19,10 @@ describe RubyTokenizer do
 		it "contains a String" do
 			expect(token.text).to be == 'Searching records is a common requirement in web applications.'
 		end
-
-    it "initializes with an empty hash" do
-      expect(token.count).to eq({})
-    end
 	end
 
   describe "#filter" do
+
     it "returns a String" do
       expect(token.filter).to be_a_kind_of String
     end

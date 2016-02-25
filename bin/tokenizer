@@ -13,7 +13,7 @@ else
 	text = ARGF.read
 end
 
-string = RubyTokenizer::Tokenizer.new(text)
-top = string.rank
+input = RubyTokenizer::Tokenizer.new(text)
+top_ten = input.rank
 
-Pry::ColorPrinter.pp(top)
+Pry::ColorPrinter.pp(top_ten)

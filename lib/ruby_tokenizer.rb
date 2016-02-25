@@ -6,11 +6,10 @@ module RubyTokenizer
 
   class Tokenizer
     include Patterns
-    attr_reader :text, :count
+    attr_reader :text
 
     def initialize(text)
       @text = text
-      @count = Hash.new(0)
     end
 
     def rank
@@ -25,11 +24,13 @@ module RubyTokenizer
     end
 
     def frequency
+      count = Hash.new(0)
       parsed = self.tokenize
       parsed.each { |word| count[word] += 1}
+      
       return count
     end
-    
+
     def tokenize
       self.filter.scan(/[-\w'’]+/)
     end
