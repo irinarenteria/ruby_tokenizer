@@ -6,8 +6,7 @@ module RubyTokenizer
 
   class Tokenizer
     include Patterns
-    attr_accessor :text
-    attr_reader :count
+    attr_reader :text, :count
 
     def initialize(text)
       @text = text
