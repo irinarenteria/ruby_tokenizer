@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = RubyTokenizer::VERSION
   spec.authors       = ["irinarenteria"]
   spec.email         = ["renteria.irina@gmail.com"]
-
+  spec.description   = "RubyTokenizer is a simple language processing command-line tool. It performs low-level tokenization and returns the top 10 most frequent words in a body of text. At the moment it's only available for English texts and it segments words by filtering whitespaces, punctuation marks, parantheses and other special characters."
   spec.summary       = "Simple NPL tokenizer in Ruby"
   spec.homepage      = "https://github.com/irinarenteria/ruby_tokenizer"
   spec.license       = "MIT"
@@ -27,7 +27,7 @@ Gem::Specification.new do |spec|
   spec.executables   = ["tokenizer"]
   spec.require_paths = ["lib"]
   spec.files = Dir['lib/**/*.rb']
-
+  
   spec.add_development_dependency "bundler", "~> 1.10"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.2"

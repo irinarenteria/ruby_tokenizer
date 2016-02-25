@@ -26,10 +26,15 @@ Or install it yourself as:
 
 ## Usage
 
-To tokenize a text, enter the command "tokenizer" followed by the paths to the targeted files.
+To tokenize a text, enter the command "tokenizer" followed by the paths to the targeted file(s).
 	
 ```ruby
 $ tokenizer /file1/path/here.txt /file2/path/here.txt
+```
+If you are in the folder containing the targeted text files:
+
+```ruby
+$ tokenizer file1.txt file2.text
 ```
 
 This is the expected output:
