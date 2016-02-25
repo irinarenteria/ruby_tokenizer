@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'ruby_tokenizer'
+require 'pry'
 
 if ARGV.empty?
 	puts "--- Please input your text below ----"
@@ -14,4 +15,8 @@ else
 end
 
 string = RubyTokenizer::Tokenizer.new(text)
-puts string.text
+top = string.rank
+
+Pry::ColorPrinter.pp(top)
+top.each do |word, count|
+end

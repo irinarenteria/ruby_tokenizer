@@ -1,5 +1,6 @@
 require "ruby_tokenizer/version"
 require "patterns_module/patterns"
+require 'pry'
 
 module RubyTokenizer
 
