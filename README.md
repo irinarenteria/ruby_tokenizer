@@ -3,7 +3,7 @@
 [![Code Climate](https://img.shields.io/codeclimate/github/kabisaict/flow.svg)](https://github.com/irinarenteria/ruby_tokenizer)
 [![Code Climate](https://img.shields.io/codeclimate/coverage/github/triAGENS/ashikawa-core.svg)](https://github.com/irinarenteria/ruby_tokenizer)
 [![Gemnasium](https://img.shields.io/gemnasium/mathiasbynens/he.svg)](https://github.com/irinarenteria/ruby_tokenizer)
-[![Gem](https://img.shields.io/gem/dtv/rails.svg)](https://github.com/irinarenteria/ruby_tokenizer)
+<!-- [![Gem](https://img.shields.io/gem/dtv/rails.svg)](https://github.com/irinarenteria/ruby_tokenizer) -->
 [![Gem Version](https://badge.fury.io/rb/ruby_tokenizer.svg)](https://badge.fury.io/rb/ruby_tokenizer)
 
 RubyTokenizer is a simple language processing command-line tool. It performs low-level tokenization and returns the top 10 most frequent words in a body of text. At the moment it's only available for English texts and it segments words by filtering whitespaces, punctuation marks, parantheses and other special characters.
