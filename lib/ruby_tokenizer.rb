@@ -29,7 +29,7 @@ module RubyTokenizer
     end
 
     def rank
-      ranked = Hash[self.frequency.sort_by {|word, count| count}.reverse]
+      ranked = Hash[self.frequency.sort_by {|_word, count| count}.reverse]
       ranked.first(10)
     end
   end
