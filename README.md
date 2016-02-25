@@ -8,6 +8,8 @@ RubyTokenizer is a simple language processing command-line tool. It performs low
 
 ## Installation
 
+To use this tool, you need to have Ruby installed. You can find more detailed instructions here: http://www.ruby-lang.org/en/downloads/ 
+
 Add this line to your application's Gemfile:
 
 ```ruby
