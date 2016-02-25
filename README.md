@@ -4,9 +4,7 @@
 [![Code Climate](https://img.shields.io/codeclimate/coverage/github/triAGENS/ashikawa-core.svg)](https://github.com/irinarenteria/ruby_tokenizer)
 [![Gemnasium](https://img.shields.io/gemnasium/mathiasbynens/he.svg)](https://github.com/irinarenteria/ruby_tokenizer)
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/ruby_tokenizer`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+RubyTokenizer is a simple language processing command-line tool. It performs low-level tokenization and returns the top 10 most frequent words in a body of text. At the moment it's only available for English texts and it segments words by filtering whitespaces, punctuation marks, parantheses and other special characters.
 
 ## Installation
 
@@ -26,13 +24,29 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To tokenize a text, enter the command "tokenizer" followed by the paths to the targeted files.
+	
+
+	$ tokenizer /file1/path/here.txt /file2/path/here.txt
+
+This is the expected output:
+
+	$ [["i", 2817],
+	  ["of", 2720],
+	  ["to", 2126],
+	  ["my", 1761],
+	  ["a", 1375],
+	  ["in", 1156],
+	  ["me", 856],
+	  ["with", 704],
+	  ["had", 686],
+	  ["you", 637]]
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+To run the test suite, fork the repo, clone it to a local directory and in the root directory run the following command:
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+	$ bundle exec rspec
 
 ## Contributing
 
