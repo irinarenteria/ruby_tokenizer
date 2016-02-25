@@ -49,7 +49,9 @@ $ ["i", 2817],
 
 To run the test suite, fork the repo, clone it to a local directory and in the root directory run the following command:
 
+```ruby
 	$ bundle exec rspec
+```
 
 ## Contributing
 
