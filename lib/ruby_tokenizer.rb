@@ -13,12 +13,15 @@ module RubyTokenizer
       @count = Hash.new(0)
     end
 
-    def filter
-      text.downcase.gsub(Patterns.basic, '')
+    def rank
+      ranked = Hash[self.frequency.sort_by {|_word, count| count}.reverse]
+      ranked.first(10)
     end
 
-    def tokenize
-      self.filter.scan(/[-\w'’]+/)
+    protected
+    
+    def filter
+      text.downcase.gsub(Patterns.basic, '')
     end
 
     def frequency
@@ -26,10 +29,9 @@ module RubyTokenizer
       parsed.each { |word| count[word] += 1}
       return count
     end
-
-    def rank
-      ranked = Hash[self.frequency.sort_by {|_word, count| count}.reverse]
-      ranked.first(10)
+    
+    def tokenize
+      self.filter.scan(/[-\w'’]+/)
     end
   end
 end
