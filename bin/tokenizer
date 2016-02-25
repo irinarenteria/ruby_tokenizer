@@ -18,5 +18,3 @@ string = RubyTokenizer::Tokenizer.new(text)
 top = string.rank
 
 Pry::ColorPrinter.pp(top)
-top.each do |word, count|
-end
