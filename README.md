@@ -26,22 +26,24 @@ Or install it yourself as:
 
 To tokenize a text, enter the command "tokenizer" followed by the paths to the targeted files.
 	
-  ```ruby
-	$ tokenizer /file1/path/here.txt /file2/path/here.txt
-  ```
+```ruby
+$ tokenizer /file1/path/here.txt /file2/path/here.txt
+```
 
 This is the expected output:
 
-    $ ["i", 2817],
-      ["of", 2720],
-      ["to", 2126],
-      ["my", 1761],
-      ["a", 1375],
-      ["in", 1156],
-      ["me", 856],
-      ["with", 704],
-      ["had", 686],
-      ["you", 637]]
+```ruby
+$ ["i", 2817],
+  ["of", 2720],
+  ["to", 2126],
+  ["my", 1761],
+  ["a", 1375],
+  ["in", 1156],
+  ["me", 856],
+  ["with", 704],
+  ["had", 686],
+  ["you", 637]]
+```
 
 ## Development
 
