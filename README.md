@@ -1,8 +1,8 @@
 # RubyTokenizer
 
-[![Code Climate](https://codeclimate.com/repos/56ce511eacac410093009b23/badges/001a637ad10c8f8159e7/gpa.svg)](https://codeclimate.com/repos/56ce511eacac410093009b23/feed)
+[![Code Climate](https://codeclimate.com/github/irinarenteria/ruby_tokenizer/badges/gpa.svg)](https://codeclimate.com/github/irinarenteria/ruby_tokenizer)
 [![Build Status](https://travis-ci.org/irinarenteria/ruby_tokenizer.svg?branch=master)](https://travis-ci.org/irinarenteria/ruby_tokenizer)
-[![Test Coverage](https://codeclimate.com/repos/56ce511eacac410093009b23/badges/001a637ad10c8f8159e7/coverage.svg)](https://codeclimate.com/repos/56ce511eacac410093009b23/coverage)
+[![Test Coverage](https://codeclimate.com/github/irinarenteria/ruby_tokenizer/badges/coverage.svg)](https://codeclimate.com/github/irinarenteria/ruby_tokenizer/coverage)
 [![Gemnasium](https://img.shields.io/gemnasium/mathiasbynens/he.svg)](https://github.com/irinarenteria/ruby_tokenizer)
 [![Gem Version](https://badge.fury.io/rb/ruby_tokenizer.svg)](https://badge.fury.io/rb/ruby_tokenizer)
 
