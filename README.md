@@ -1,6 +1,6 @@
 # RubyTokenizer
 
-[![Code Climate](https://img.shields.io/codeclimate/github/kabisaict/flow.svg)](https://github.com/irinarenteria/ruby_tokenizer)
+[![Code Climate](https://codeclimate.com/repos/56ce511eacac410093009b23/badges/001a637ad10c8f8159e7/gpa.svg)](https://codeclimate.com/repos/56ce511eacac410093009b23/feed)
 [![Code Climate](https://img.shields.io/codeclimate/coverage/github/triAGENS/ashikawa-core.svg)](https://github.com/irinarenteria/ruby_tokenizer)
 [![Gemnasium](https://img.shields.io/gemnasium/mathiasbynens/he.svg)](https://github.com/irinarenteria/ruby_tokenizer)
 [![Gem Version](https://badge.fury.io/rb/ruby_tokenizer.svg)](https://badge.fury.io/rb/ruby_tokenizer)
