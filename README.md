@@ -41,16 +41,16 @@ $ tokenizer file1.txt file2.text
 This is the expected output:
 
 ```ruby
-$ ["i", 2817],
-  ["of", 2720],
-  ["to", 2126],
-  ["my", 1761],
-  ["a", 1375],
-  ["in", 1156],
-  ["me", 856],
-  ["with", 704],
-  ["had", 686],
-  ["you", 637]]
+$ [["the", 1782],
+  ["and", 855],
+  ["to", 790],
+  ["a", 672],
+  ["of", 610],
+  ["she", 533],
+  ["it", 463],
+  ["said", 457],
+  ["in", 416],
+  ["alice", 384]]
 ```
 
 ## Development
