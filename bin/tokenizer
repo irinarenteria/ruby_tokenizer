@@ -1,19 +1,12 @@
 #!/usr/bin/env ruby
 
 require 'ruby_tokenizer'
+require 'input_stream_module/input_stream.rb'
 require 'pry'
 
-if ARGV.empty?
-  puts "--- Please input your text below ----"
-  text = STDIN.gets
-elsif ARGV.detect { |input| File.file?(input) == false }
-  puts "File not found: Please try again."
-  exit 2
-else
-  text = ARGF.read
-end
+input = InputStream.analyze
 
-input = RubyTokenizer::Tokenizer.new(text)
-top_ten = input.rank
+output = RubyTokenizer::Tokenizer.new(input)
+top_ten = output.rank
 
 Pry::ColorPrinter.pp(top_ten)
