@@ -1,10 +1,10 @@
 module InputStream
 
-  def self.analyze
-    if ARGV.empty?
+  def self.analyze(*input)
+    if input.empty?
       puts "--- Please input your text below ----"
       text = STDIN.gets
-    elsif ARGV.detect { |input| File.file?(input) == false }
+    elsif input.detect { |input| File.file?(input) == false }
       puts "File not found: Please try again."
       exit 2
     else

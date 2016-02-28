@@ -4,7 +4,8 @@ require 'ruby_tokenizer'
 require 'input_stream_module/input_stream.rb'
 require 'pry'
 
-input = InputStream.analyze
+command = ARGV
+input = InputStream.analyze(command)
 
 output = RubyTokenizer::Tokenizer.new(input)
 top_ten = output.rank
