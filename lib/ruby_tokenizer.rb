@@ -22,16 +22,16 @@ module RubyTokenizer
       text.downcase.gsub(Patterns.basic, '')
     end
 
+    def tokenize
+      self.filter.scan(/[-\w'’]+/)
+    end
+    
     def frequency
       count = Hash.new(0)
       parsed = self.tokenize
       parsed.each { |word| count[word] += 1 }
 
       return count
-    end
-
-    def tokenize
-      self.filter.scan(/[-\w'’]+/)
     end
   end
 end

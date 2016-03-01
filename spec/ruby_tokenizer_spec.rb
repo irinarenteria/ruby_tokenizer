@@ -1,8 +1,9 @@
 require 'spec_helper'
 require 'ruby_tokenizer'
+require "patterns_module/patterns"
 
 describe RubyTokenizer do
-  let(:token) {RubyTokenizer::Tokenizer.new('Searching records is a common requirement in web applications.')}
+  let(:token) { RubyTokenizer::Tokenizer.new('Searching records is a common requirement in web applications.') }
   RubyTokenizer::Tokenizer.send(:public, *RubyTokenizer::Tokenizer.protected_instance_methods) 
 
   describe "#version" do	
@@ -26,14 +27,28 @@ describe RubyTokenizer do
       expect(token.filter).to be_a_kind_of String
     end
 
-    it "filters tokens" do
+    it "downcases the string" do
+      expect(token.filter).to be == 'searching records is a common requirement in web applications'
+    end
+
+    it "should remove matching patterns" do
+      expect(token.filter).not_to match(Patterns.basic)
+    end
+
+    it "should remove any whitespaces around matching patterns" do
       expect(token.filter).to be == 'searching records is a common requirement in web applications'
     end
   end
 
   describe "#tokenize" do
+    let(:apostrophe) { RubyTokenizer::Tokenizer.new("isn't sayin' Mike’s Thompsons’") }
+
     it "should be an Array" do
       expect(token.tokenize).to be_a_kind_of Array
+    end
+
+    it "preserves apostrophes within or at the end of words" do
+      expect(apostrophe.tokenize).to be == ["isn't", "sayin'", "mike’s", "thompsons’" ]
     end
 
     it "parses string into tokens" do
