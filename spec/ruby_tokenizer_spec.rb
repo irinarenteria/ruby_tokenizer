@@ -28,7 +28,7 @@ describe RubyTokenizer do
     end
 
     it "downcases the string and removes leading and trailing whitespaces" do
-      expect(token.filter).to be == 'searching records is a common requirement in web applications'
+      expect(token.filter).to be == 'searching records is a common requirement in web applications.'
     end
 
     it "should remove matching patterns" do
@@ -40,9 +40,16 @@ describe RubyTokenizer do
     let(:apostrophe) { RubyTokenizer::Tokenizer.new("isn't sayin' Mike’s Thompsons’") }
     let(:underscore) { RubyTokenizer::Tokenizer.new("green_mill jazz") }
     let(:hyphen) { RubyTokenizer::Tokenizer.new("green-mill jazz") }
+    let(:acronym) { RubyTokenizer::Tokenizer.new("U.S.A.") }
+    let(:email) { RubyTokenizer::Tokenizer.new("genghis.khan@gmail.com, leslie_knope@yahoo.com") }
+    let(:url) { RubyTokenizer::Tokenizer.new("www.robots.com") }
 
     it "should be an Array" do
       expect(token.tokenize).to be_a_kind_of Array
+    end
+
+    it "parses string into tokens" do
+      expect(token.tokenize).to be == ["searching", "records", "is", "a", "common", "requirement", "in", "web", "applications"]
     end
 
     it "preserves apostrophes within or at the end of words" do
@@ -57,8 +64,16 @@ describe RubyTokenizer do
       expect(hyphen.tokenize).to be == ["green-mill", "jazz"]
     end
 
-    it "parses string into tokens" do
-      expect(token.tokenize).to be == ["searching", "records", "is", "a", "common", "requirement", "in", "web", "applications"]
+    it "preserves acronyms and initialisms with periods" do
+      expect(acronym.tokenize).to be == ["u.s.a"]
+    end
+
+    it "preserves e-mail addresses" do
+      expect(email.tokenize).to be == ["genghis.khan@gmail.com", "leslie_knope@yahoo.com"]
+    end
+
+    it "preserves URLs" do
+      expect(url.tokenize).to be == ["www.robots.com"]
     end
   end
 

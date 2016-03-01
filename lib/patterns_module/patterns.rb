@@ -1,5 +1,5 @@
 module Patterns
-  PUNCTUATION = [':', ',', '—', '!', '?', ';', '.', '"']
+  PUNCTUATION = [':', ',', '—', '!', '?', ';', '"']
   PARENS = ['{', '[', '}', ']', '(', ')']
   MISC = ['<', '«', '„', '>', '»', '“', '*']
   # CONJUNCTIONS = ['for ', 'and ', 'nor ', 'but ', 'or ', 'yet ', 'so ', 'as ']

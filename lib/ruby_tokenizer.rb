@@ -19,11 +19,11 @@ module RubyTokenizer
     protected
     
     def filter
-      text.downcase.gsub(Patterns.basic, '')
+      text.downcase.gsub(Patterns.basic, ' ')
     end
 
     def tokenize
-      self.filter.scan(/[-\w'’]+/)
+      self.filter.scan(/[-\w'’.@]+/).map { |token| token.gsub(/[.]$/, '') }
     end
 
     def frequency
