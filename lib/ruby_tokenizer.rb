@@ -25,7 +25,7 @@ module RubyTokenizer
     def tokenize
       self.filter.scan(/[-\w'’]+/)
     end
-    
+
     def frequency
       count = Hash.new(0)
       parsed = self.tokenize

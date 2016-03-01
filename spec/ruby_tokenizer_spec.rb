@@ -27,21 +27,19 @@ describe RubyTokenizer do
       expect(token.filter).to be_a_kind_of String
     end
 
-    it "downcases the string" do
+    it "downcases the string and removes leading and trailing whitespaces" do
       expect(token.filter).to be == 'searching records is a common requirement in web applications'
     end
 
     it "should remove matching patterns" do
       expect(token.filter).not_to match(Patterns.basic)
     end
-
-    it "should remove any whitespaces around matching patterns" do
-      expect(token.filter).to be == 'searching records is a common requirement in web applications'
-    end
   end
 
   describe "#tokenize" do
     let(:apostrophe) { RubyTokenizer::Tokenizer.new("isn't sayin' Mike’s Thompsons’") }
+    let(:underscore) { RubyTokenizer::Tokenizer.new("green_mill jazz") }
+    let(:hyphen) { RubyTokenizer::Tokenizer.new("green-mill jazz") }
 
     it "should be an Array" do
       expect(token.tokenize).to be_a_kind_of Array
@@ -49,6 +47,14 @@ describe RubyTokenizer do
 
     it "preserves apostrophes within or at the end of words" do
       expect(apostrophe.tokenize).to be == ["isn't", "sayin'", "mike’s", "thompsons’" ]
+    end
+
+    it "preserves underscores" do
+      expect(underscore.tokenize).to be == ["green_mill", "jazz"]
+    end
+
+    it "preserves hyphens" do
+      expect(hyphen.tokenize).to be == ["green-mill", "jazz"]
     end
 
     it "parses string into tokens" do
