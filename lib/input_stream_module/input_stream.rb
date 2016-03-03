@@ -7,7 +7,7 @@ The methods in this module parse all command-line arguments according to 4 scena
   3) Multiple file input will concatenate and output the text
   4) Invalid file path/format will raise an error and stop the program
 
-Further steps: Separate file processing responsibilities into a FileProcessor class,
+Next steps: Separate file processing responsibilities into a FileProcessor class,
 which would also include a method for encoding the input to UTF-8.
 =end
 

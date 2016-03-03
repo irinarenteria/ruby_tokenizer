@@ -3,6 +3,16 @@ require "patterns_module/patterns"
 
 module RubyTokenizer
 
+=begin
+This class' protected interface selects viable tokens by processesing string inputs
+through chosen level of tokenization and post-processing special characters.
+The public interface outputs the top 10 tokens by frequency.
+
+Initially, when the class was smaller, it made sense to keep the main logic here,
+but now it has mutiple responsibilities, so there's a need for a TokenCount and
+a TokenizerOutput class.
+=end
+
   class Tokenizer
     include Patterns
     attr_reader :text
