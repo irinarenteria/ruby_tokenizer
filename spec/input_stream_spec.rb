@@ -12,7 +12,12 @@ describe InputStream do
   end
 
   describe ".get_input" do
-    pending
+    it "captures STDIN and outputs it as a string" do
+      mod_double = class_double("InputStream").as_stubbed_const(:transfer_nested_constants => true)
+
+      allow(mod_double).to receive(:get_input)
+      expect { mod_double.get_input }.to output(kind_of(String)).to_stdout
+    end
   end
 
   describe ".read_file" do
