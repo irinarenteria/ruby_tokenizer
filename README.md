@@ -54,6 +54,18 @@ $ [["the", 1782],
   ["alice", 384]]
 ```
 
+If only the 'tokenizer' command is entered, then the user will be prompted to enter a string:
+```ruby
+$ tokenizer
+$ "--- Please input your text below ----"
+$ 
+```
+
+If the file path cannot be found or the file has a format that cannot be read, a LoadError will be displayed:
+```ruby
+$ `read_file': File not found: Please try again. (LoadError)
+```
+
 ## Development
 
 To run the test suite, fork the repo, clone it to a local directory and in the root directory run the following command:
