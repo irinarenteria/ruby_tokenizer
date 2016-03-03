@@ -3,7 +3,6 @@
 [![Code Climate](https://codeclimate.com/github/irinarenteria/ruby_tokenizer/badges/gpa.svg)](https://codeclimate.com/github/irinarenteria/ruby_tokenizer)
 [![Build Status](https://travis-ci.org/irinarenteria/ruby_tokenizer.svg?branch=master)](https://travis-ci.org/irinarenteria/ruby_tokenizer)
 [![Test Coverage](https://codeclimate.com/github/irinarenteria/ruby_tokenizer/badges/coverage.svg)](https://codeclimate.com/github/irinarenteria/ruby_tokenizer/coverage)
-<!-- [![Gemnasium](https://img.shields.io/gemnasium/mathiasbynens/he.svg)](https://github.com/irinarenteria/ruby_tokenizer) -->
 [![Gem Version](https://badge.fury.io/rb/ruby_tokenizer.svg)](https://badge.fury.io/rb/ruby_tokenizer)
 
 RubyTokenizer is a simple language processing command-line tool, modeled after Apache Solr's [Classic Tokenizer](https://cwiki.apache.org/confluence/display/solr/Tokenizers). It performs low-level tokenization through word-segmentation by filtering whitespaces, punctuation marks, parantheses and other special characters, and returns the top 10 most frequent words in a body of text. At the moment it's only available for English texts in UTF-8 (Unicode 6.3) format, e.g. standard Gutenberg.org files. All results are case-insensitive.
