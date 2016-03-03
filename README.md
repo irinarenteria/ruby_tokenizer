@@ -104,9 +104,7 @@ The following dependencies are required:
 [Bundler](https://github.com/bundler/bundler),
 [Rake](https://github.com/ruby/rake),
 [RSpec](https://github.com/rspec/rspec),
-and [Pry](https://github.com/pry/pry).
-
-To install these dependencies manually:
+and [Pry](https://github.com/pry/pry). To install these dependencies manually:
 ```ruby
 $ gem install name
 ```
