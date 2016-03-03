@@ -90,7 +90,7 @@ $ ["U.S.A"]
 ```
 Numbers (phone numbers and numbers with a comma format are not tokenized)
 ```ruby
-$ ["3.50]
+$ ["3.50"]
 ```
 
 ## Development
