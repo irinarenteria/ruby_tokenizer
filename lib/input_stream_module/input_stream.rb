@@ -1,5 +1,16 @@
 module InputStream
 
+=begin
+The methods in this module parse all command-line arguments according to 4 scenarios:
+  1) An empty input will prompt the user to enter a custom string
+  2) Single file input will output the text
+  3) Multiple file input will concatenate and output the text
+  4) Invalid file path/format will raise an error and stop the program
+
+Further steps: Separate file processing responsibilities into a FileProcessor class,
+which would also include a method for encoding the input to UTF-8.
+=end
+
   def self.analyze(input)
     if input.empty?
       self.prompt("--- Please input your text below ----")
