@@ -101,10 +101,10 @@ To run the test suite, fork the repo, clone it to a local directory and in the r
 $ bundle exec rspec
 ```
 The following dependencies are required:
-[Bundler](https://github.com/bundler/bundler)
-[Rake](https://github.com/ruby/rake)
-[RSpec](https://github.com/rspec/rspec)
-[Pry](https://github.com/pry/pry)
+[Bundler](https://github.com/bundler/bundler),
+[Rake](https://github.com/ruby/rake),
+[RSpec](https://github.com/rspec/rspec),
+and [Pry](https://github.com/pry/pry)
 
 To install these dependencies manually:
 ```ruby
