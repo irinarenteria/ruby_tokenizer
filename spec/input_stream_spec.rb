@@ -30,16 +30,16 @@ describe InputStream do
     end
 
     it "reads input files" do
-    mod_double = class_double("InputStream").as_stubbed_const(:transfer_nested_constants => true)
-    allow(mod_double).to receive(:read_file).with(kind_of(Array))
+      mod_double = class_double("InputStream").as_stubbed_const(:transfer_nested_constants => true)
+      allow(mod_double).to receive(:read_file).with(kind_of(Array))
 
-    test_file.write(content)
-    test_file.rewind
+      test_file.write(content)
+      test_file.rewind
 
-    expect { mod_double.read_file([test_file.path]) }.to output(kind_of(String)).to_stdout
+      expect { mod_double.read_file([test_file.path]) }.to output(kind_of(String)).to_stdout
 
-    test_file.close
-    test_file.unlink
+      test_file.close
+      test_file.unlink
     end
   end
 end
