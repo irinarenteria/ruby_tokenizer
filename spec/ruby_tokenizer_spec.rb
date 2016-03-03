@@ -82,7 +82,7 @@ describe RubyTokenizer do
       expect(token.frequency).to be_a_kind_of Hash
     end
 
-    it "contains a hash" do
+    it "contains word counts" do
       expect(token.frequency).to be == {"searching"=>1, "records"=>1, "is"=>1, "a"=>1, "common"=>1, "requirement"=>1, "in"=>1, "web"=>1, "applications"=>1}
     end
   end
