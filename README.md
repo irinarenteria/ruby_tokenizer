@@ -70,21 +70,21 @@ $ `read_file': File not found: Please try again. (LoadError)
 
 RubyTokenizer accounts for e-mail addresses, URLs, hyphenated words and certain abbreviations as follows:
 
-1. Email addresses:
+**Email addresses:**
 ```ruby
 $ ["leslie.knope@gmail.com"]
 $ ["leslie_knope@gmail.com"]
 $ ["leslie-knope@gmail.com"]
 ```
-2. URLs:
+**URLs:**
 ```ruby
 $ ["www.frankestein.com"]
 ```
-3. Hyphenated words:
+**Hyphenated words:**
 ```ruby
 $ ["Chicago-based"]
 ```
-4. Abbreviations:
+**Abbreviations:**
 ```ruby
 $ ["U.S.A"]
 ```
