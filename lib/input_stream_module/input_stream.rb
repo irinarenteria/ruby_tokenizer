@@ -30,7 +30,6 @@ which would also include a method for encoding the input to UTF-8.
   def self.read_file(input)
     if input.detect { |path| File.file?(path) == false }
       raise LoadError, "File not found: Please try again."
-      exit 2
     else
       ARGF.read
     end
