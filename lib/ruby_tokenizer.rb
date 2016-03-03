@@ -23,7 +23,7 @@ module RubyTokenizer
     end
 
     def tokenize
-      self.filter.scan(/[-\w'’.@]+/).map { |token| token.gsub(/[.]$/, '') }
+      self.filter.scan(/[-\w'’.@]+/).map { |token| token.gsub(/[._-]$/, '') }
     end
 
     def frequency

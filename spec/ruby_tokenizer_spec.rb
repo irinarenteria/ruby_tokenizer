@@ -43,6 +43,8 @@ describe RubyTokenizer do
     let(:acronym) { RubyTokenizer::Tokenizer.new("U.S.A.") }
     let(:email) { RubyTokenizer::Tokenizer.new("genghis.khan@gmail.com, leslie_knope@yahoo.com") }
     let(:url) { RubyTokenizer::Tokenizer.new("www.robots.com") }
+    let(:end_hyphen) { RubyTokenizer::Tokenizer.new("doctor who-") }
+    let(:end_underscore) { RubyTokenizer::Tokenizer.new("doctor who_") }
 
     it "should be an Array" do
       expect(token.tokenize).to be_a_kind_of Array
@@ -74,6 +76,14 @@ describe RubyTokenizer do
 
     it "preserves URLs" do
       expect(url.tokenize).to be == ["www.robots.com"]
+    end
+
+    it "clears end of string hyphens" do
+      expect(end_hyphen.tokenize).to be == ["doctor", "who"]
+    end
+
+    it "clears end of string underscores" do
+      expect(end_underscore.tokenize).to be == ["doctor", "who"]
     end
   end
 
