@@ -7,6 +7,8 @@
 
 RubyTokenizer is a simple language processing command-line tool, modeled after Apache Solr's [Classic Tokenizer](https://cwiki.apache.org/confluence/display/solr/Tokenizers). It performs low-level tokenization through word-segmentation by filtering whitespaces, punctuation marks, parantheses and other special characters, and returns the top 10 most frequent words in a body of text. At the moment it's only available for English texts in UTF-8 (Unicode 6.3) format, e.g. standard Gutenberg.org files. All results are case-insensitive.
 
+Note: This is my first gem and there are still many unknowns to untangle, so any feedback/suggestions/bug reports are welcomed!
+
 ## Installation
 
 To use this tool, you need to have Ruby installed. You can find more detailed instructions here: http://www.ruby-lang.org/en/downloads/ 
