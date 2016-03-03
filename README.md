@@ -70,25 +70,25 @@ $ `read_file': File not found: Please try again. (LoadError)
 
 RubyTokenizer accounts for e-mail addresses, URLs, hyphenated words and certain abbreviations as follows:
 
-Email addresses
+Email addresses:
 ```ruby
 $ ["leslie.knope@gmail.com"]
 $ ["leslie_knope@gmail.com"]
 $ ["leslie-knope@gmail.com"]
 ```
-URLs
+URLs:
 ```ruby
 $ ["www.frankestein.com"]
 ```
-Hyphenated words
+Hyphenated words:
 ```ruby
 $ ["Chicago-based"]
 ```
-Abbreviations
+Abbreviations:
 ```ruby
 $ ["U.S.A"]
 ```
-Numbers (phone numbers and numbers with a comma format are not tokenized)
+Numbers (phone numbers and numbers with a comma format are not tokenized):
 ```ruby
 $ ["3.50"]
 ```
@@ -99,6 +99,16 @@ To run the test suite, fork the repo, clone it to a local directory and in the r
 
 ```ruby
 $ bundle exec rspec
+```
+The following dependencies are required:
+[Bundler](https://github.com/bundler/bundler)
+[Rake](https://github.com/ruby/rake)
+[RSpec](https://github.com/rspec/rspec)
+[Pry](https://github.com/pry/pry)
+
+To install these dependencies manually:
+```ruby
+$ gem install name
 ```
 
 ## Contributing
