@@ -95,11 +95,6 @@ $ ["3.50"]
 
 ## Development
 
-To run the test suite, fork the repo, clone it to a local directory and in the root directory run the following command:
-
-```ruby
-$ bundle exec rspec
-```
 The following dependencies are required:
 [Bundler](https://github.com/bundler/bundler),
 [Rake](https://github.com/ruby/rake),
@@ -107,6 +102,11 @@ The following dependencies are required:
 and [Pry](https://github.com/pry/pry). To install these dependencies manually:
 ```ruby
 $ gem install name
+```
+To run the test suite, fork the repo, clone it to a local directory and in the root directory run the following command:
+
+```ruby
+$ bundle exec rspec
 ```
 
 ## Contributing
