@@ -21,7 +21,10 @@ describe InputStream do
   end
 
   describe ".read_file" do
-    pending
-  end
+    let(:file) { InputStream.read_file(['no.txt']) }
 
+    it "raises an error when the file can't be found or read" do
+      expect { file }.to raise_error(LoadError, "File not found: Please try again.")
+    end
+  end
 end
