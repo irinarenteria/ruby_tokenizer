@@ -10,8 +10,11 @@ RubyTokenizer is a simple language processing command-line tool, modeled loosely
 Note: This is my first gem and there are still many unknowns to untangle, so any feedback/suggestions/bug reports are welcomed! Although [A-Z0-9] was the minimum requirement, in order to make this gem as usable as possible right off the bat, this tokenizer goes beyond that and includes the necessary punctuation to capture e-mails, URLs and other edge-cases.
 
 Future updates:
+
 1. Having a FileConverter class analyze the file input and convert it to UTF-8
+
 2. Output word count to CSV file
+
 3. Use OptionParser to provide more command-line interaction (e.g. adjust tokenization level)
 
 ## Installation
