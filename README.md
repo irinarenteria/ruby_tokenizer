@@ -34,15 +34,16 @@ To tokenize a text, enter the command "tokenizer" followed by the paths to the t
 ```ruby
 $ tokenizer /file1/path/here.txt /file2/path/here.txt
 ```
-If you are in the folder containing the targeted text files:
-
-```ruby
-$ tokenizer file1.txt file2.text
-```
 To use the files that come bundled with this gem:
 
 ```ruby
 $ tokenizer lib/text_files/frankenstein.txt lib/text_files/war_of_the_worlds.txt
+```
+
+If you are in the folder containing the targeted text files:
+
+```ruby
+$ tokenizer file1.txt file2.text
 ```
 
 This is the expected output:
