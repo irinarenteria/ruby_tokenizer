@@ -5,9 +5,14 @@
 [![Test Coverage](https://codeclimate.com/github/irinarenteria/ruby_tokenizer/badges/coverage.svg)](https://codeclimate.com/github/irinarenteria/ruby_tokenizer/coverage)
 [![Gem Version](https://badge.fury.io/rb/ruby_tokenizer.svg)](https://badge.fury.io/rb/ruby_tokenizer)
 
-RubyTokenizer is a simple language processing command-line tool, modeled loosely after Apache Solr's [Classic Tokenizer](https://cwiki.apache.org/confluence/display/solr/Tokenizers). It performs low-level tokenization through word-segmentation by filtering whitespaces, punctuation marks, parantheses and other special characters, and returns the top 10 most frequent words in a body of text. At the moment it's only available for English texts in UTF-8 (Unicode 6.3) format, e.g. standard Gutenberg.org files. All results are case-insensitive.
+RubyTokenizer is a simple language processing command-line tool, modeled loosely after Apache Solr's [Classic Tokenizer](https://cwiki.apache.org/confluence/display/solr/Tokenizers). It performs low-level tokenization through word-segmentation by filtering whitespaces, punctuation marks, parantheses and other special characters, and returns the top 10 most frequent words in a body of text. At the moment it's only available for English texts in UTF-8, Unicode 6.3 format (e.g. standard Gutenberg.org files). All results are case-insensitive.
 
 Note: This is my first gem and there are still many unknowns to untangle, so any feedback/suggestions/bug reports are welcomed! Although [A-Z0-9] was the minimum requirement, in order to make this gem as usable as possible right off the bat, this tokenizer goes beyond that and includes the necessary punctuation to capture e-mails, URLs and other edge-cases.
+
+Future updates:
+1. Having a FileConverter class analyze the file input and convert it to UTF-8
+2. Output word count to CSV file
+3. Use OptionParser to provide more command-line interaction (e.g. adjust tokenization level)
 
 ## Installation
 
