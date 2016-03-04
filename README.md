@@ -42,7 +42,7 @@ To tokenize a text, enter the command "tokenizer" followed by the paths to the t
 ```ruby
 $ tokenizer /file1/path/here.txt /file2/path/here.txt
 ```
-To use the files that come bundled with this gem:
+To use the files that come bundled with this gem, clone the repo and while the root directory input:
 
 ```ruby
 $ tokenizer lib/text_files/frankenstein.txt lib/text_files/war_of_the_worlds.txt
