@@ -15,7 +15,7 @@ Future updates:
 
 2. Output word count to CSV file
 
-3. Use OptionParser to provide more command-line interaction (e.g. adjust tokenization level)
+3. Use [OptionParser](http://ruby-doc.org/stdlib-2.3.0/libdoc/optparse/rdoc/OptionParser.html) to provide more command-line interaction (e.g. adjust tokenization level)
 
 ## Installation
 
