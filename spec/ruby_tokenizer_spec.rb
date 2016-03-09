@@ -98,12 +98,13 @@ describe RubyTokenizer do
   end
 
   describe "#rank" do
+    let(:sample) { RubyTokenizer::Tokenizer.new('Searching searching searching is is a common requirement in web applications.') }
     it "should be an Array" do
-      expect(token.rank).to be_a_kind_of Array
+      expect(sample.rank).to be_a_kind_of Array
     end
 
     it "contains a nested array" do
-      expect(token.rank).to be == [["applications", 1], ["web", 1], ["in", 1], ["requirement", 1], ["common", 1], ["a", 1], ["is", 1], ["records", 1], ["searching", 1]]
+      expect(sample.rank).to be == [["searching", 3], ["is", 2], ["requirement", 1], ["common", 1], ["a", 1], ["web", 1], ["in", 1], ["applications", 1]]
     end
   end
 end
