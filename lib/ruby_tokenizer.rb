@@ -22,7 +22,7 @@ a TokenizerOutput class.
     end
 
     def rank
-      ranked = Hash[self.frequency.sort_by { |_word, count| count }.reverse]
+      ranked = Hash[self.frequency.sort.sort_by { |word| word[1] }.reverse]
       ranked.first(10)
     end
 

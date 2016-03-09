@@ -104,7 +104,7 @@ describe RubyTokenizer do
     end
 
     it "contains a nested array" do
-      expect(sample.rank).to be == [["searching", 3], ["is", 2], ["requirement", 1], ["common", 1], ["a", 1], ["web", 1], ["in", 1], ["applications", 1]]
+      expect(sample.rank).to be == [["searching", 3], ["is", 2], ["web", 1], ["requirement", 1], ["in", 1], ["common", 1], ["applications", 1], ["a", 1]]
     end
   end
 end
