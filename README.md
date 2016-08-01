@@ -7,8 +7,6 @@
 
 RubyTokenizer is a simple language processing command-line tool, modeled loosely after Apache Solr's [Classic Tokenizer](https://cwiki.apache.org/confluence/display/solr/Tokenizers). It performs low-level tokenization through word-segmentation by filtering whitespaces, punctuation marks, parantheses and other special characters, and returns the top 10 most frequent words in a body of text. At the moment it's only available for English texts in UTF-8, Unicode 6.3 format (e.g. standard Gutenberg.org files). All results are case-insensitive.
 
-Note: This is my first gem and there are still many unknowns to untangle, so any feedback/suggestions/bug reports are welcomed! Although [A-Z0-9] was the minimum requirement, in order to make this gem as usable as possible right off the bat, this tokenizer goes beyond that and includes the necessary punctuation to capture e-mails, URLs and other edge-cases.
-
 Future updates:
 
 1. Having a FileConverter class analyze the file input and convert it to UTF-8
@@ -19,7 +17,7 @@ Future updates:
 
 ## Installation
 
-To use this tool, you need to have Ruby installed. You can find more detailed instructions here: http://www.ruby-lang.org/en/downloads/ 
+To use this tool, you need to have Ruby installed. You can find more detailed instructions here: http://www.ruby-lang.org/en/downloads/
 
 Add this line to your application's Gemfile:
 
@@ -38,7 +36,7 @@ Or install it yourself as:
 ## Usage
 
 To tokenize a text, enter the command "tokenizer" followed by the paths to the targeted file(s):
-	
+
 ```ruby
 $ tokenizer /file1/path/here.txt /file2/path/here.txt
 ```
@@ -73,7 +71,7 @@ If only the 'tokenizer' command is entered, then the user will be prompted to en
 ```ruby
 $ tokenizer
 $ "--- Please input your text below ----"
-$ 
+$
 ```
 
 If the file path cannot be found or the file has a format that cannot be read, a LoadError will be displayed:
@@ -132,4 +130,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/irinar
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
