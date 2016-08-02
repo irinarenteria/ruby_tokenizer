@@ -1,12 +1,12 @@
 require 'spec_helper'
 require 'ruby_tokenizer'
-require "patterns_module/patterns"
+require "patterns/patterns"
 
 describe RubyTokenizer do
   let(:token) { RubyTokenizer::Tokenizer.new('Searching records is a common requirement in web applications.') }
-  RubyTokenizer::Tokenizer.send(:public, *RubyTokenizer::Tokenizer.protected_instance_methods) 
+  RubyTokenizer::Tokenizer.send(:public, *RubyTokenizer::Tokenizer.protected_instance_methods)
 
-  describe "#version" do	
+  describe "#version" do
     it 'has a version number' do
       expect(RubyTokenizer::VERSION).not_to be nil
     end
@@ -21,7 +21,7 @@ describe RubyTokenizer do
       expect(token.text).to be == 'Searching records is a common requirement in web applications.'
     end
   end
-  
+
   describe "#filter" do
     it "returns a String" do
       expect(token.filter).to be_a_kind_of String

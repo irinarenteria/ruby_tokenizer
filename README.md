@@ -5,7 +5,7 @@
 [![Test Coverage](https://codeclimate.com/github/irinarenteria/ruby_tokenizer/badges/coverage.svg)](https://codeclimate.com/github/irinarenteria/ruby_tokenizer/coverage)
 [![Gem Version](https://badge.fury.io/rb/ruby_tokenizer.svg)](https://badge.fury.io/rb/ruby_tokenizer)
 
-RubyTokenizer is a simple language processing command-line tool, modeled loosely after Apache Solr's [Classic Tokenizer](https://cwiki.apache.org/confluence/display/solr/Tokenizers). It performs low-level tokenization through word-segmentation by filtering whitespaces, punctuation marks, parantheses and other special characters, and returns the top 10 most frequent words in a body of text. At the moment it's only available for English texts in UTF-8, Unicode 6.3 format (e.g. standard Gutenberg.org files). All results are case-insensitive.
+RubyTokenizer is a simple language processing command-line tool, modeled loosely after Apache Solr's [Classic Tokenizer](https://cwiki.apache.org/confluence/display/solr/Tokenizers). It performs low-level tokenization through word-segmentation by filtering whitespaces, punctuation marks, parantheses and other special characters, and returns the top 10 most frequent words in a body of text. At the moment it's only available for English texts in UTF-8, Unicode 6.3 format. All results are case-insensitive.
 
 Future updates:
 
@@ -43,7 +43,7 @@ $ tokenizer /file1/path/here.txt /file2/path/here.txt
 To use the files that come bundled with this gem, clone the repo and while in the root directory input:
 
 ```ruby
-$ tokenizer lib/text_files/frankenstein.txt lib/text_files/war_of_the_worlds.txt
+$ tokenizer lib/samples/frankenstein.txt lib/samples/war_of_the_worlds.txt
 ```
 
 If you are in the folder containing the targeted text files:

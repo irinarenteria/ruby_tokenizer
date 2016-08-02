@@ -1,5 +1,5 @@
 require 'spec_helper'
-require 'patterns_module/patterns'
+require 'patterns/patterns'
 
 describe Patterns do
 

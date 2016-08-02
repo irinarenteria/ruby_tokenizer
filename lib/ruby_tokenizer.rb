@@ -1,5 +1,5 @@
 require "ruby_tokenizer/version"
-require "patterns_module/patterns"
+require "patterns/patterns"
 
 module RubyTokenizer
 
@@ -27,7 +27,7 @@ a TokenizerOutput class.
     end
 
     protected
-    
+
     def filter
       text.downcase.gsub(Patterns.basic, ' ')
     end
