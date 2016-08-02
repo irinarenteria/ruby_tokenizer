@@ -1,8 +1,8 @@
 require 'spec_helper'
-require 'input_stream_module/input_stream'
+require 'input/input'
 
 describe InputStream do
-  
+
   describe ".prompt" do
     let(:string_output) { InputStream.prompt("--- Please input your text below ----") }
 
