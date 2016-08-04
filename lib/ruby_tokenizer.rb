@@ -1,5 +1,4 @@
 require "ruby_tokenizer/version"
-require "patterns/patterns"
 
 module RubyTokenizer
 
@@ -14,10 +13,11 @@ a TokenizerOutput class.
 =end
 
   class Tokenizer
-    attr_reader :text
+    attr_reader :text, :level
 
-    def initialize(text)
+    def initialize(text, level)
       @text = text
+      @level = level
     end
 
     def rank
@@ -28,7 +28,7 @@ a TokenizerOutput class.
     protected
 
     def filter
-      text.downcase.gsub(Patterns.basic, ' ')
+      text.downcase.gsub(level, ' ')
     end
 
     def tokenize
