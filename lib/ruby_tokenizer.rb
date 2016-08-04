@@ -14,7 +14,6 @@ a TokenizerOutput class.
 =end
 
   class Tokenizer
-    include Patterns
     attr_reader :text
 
     def initialize(text)
