@@ -3,7 +3,7 @@ require 'ruby_tokenizer'
 require "patterns/patterns"
 
 describe RubyTokenizer do
-  let(:token) { RubyTokenizer::Tokenizer.new('Searching records is a common requirement in web applications.') }
+  let(:token) { RubyTokenizer::Tokenizer.new('Searching records is a common requirement in web applications.', Patterns.basic) }
   RubyTokenizer::Tokenizer.send(:public, *RubyTokenizer::Tokenizer.protected_instance_methods)
 
   describe "#version" do
@@ -37,14 +37,14 @@ describe RubyTokenizer do
   end
 
   describe "#tokenize" do
-    let(:apostrophe) { RubyTokenizer::Tokenizer.new("isn't sayin' Mike’s Thompsons’") }
-    let(:underscore) { RubyTokenizer::Tokenizer.new("green_mill jazz") }
-    let(:hyphen) { RubyTokenizer::Tokenizer.new("green-mill jazz") }
-    let(:acronym) { RubyTokenizer::Tokenizer.new("U.S.A.") }
-    let(:email) { RubyTokenizer::Tokenizer.new("genghis.khan@gmail.com, leslie_knope@yahoo.com") }
-    let(:url) { RubyTokenizer::Tokenizer.new("www.robots.com") }
-    let(:end_hyphen) { RubyTokenizer::Tokenizer.new("doctor who-") }
-    let(:end_underscore) { RubyTokenizer::Tokenizer.new("doctor who_") }
+    let(:apostrophe) { RubyTokenizer::Tokenizer.new("isn't sayin' Mike’s Thompsons’", Patterns.basic) }
+    let(:underscore) { RubyTokenizer::Tokenizer.new("green_mill jazz", Patterns.basic) }
+    let(:hyphen) { RubyTokenizer::Tokenizer.new("green-mill jazz", Patterns.basic) }
+    let(:acronym) { RubyTokenizer::Tokenizer.new("U.S.A.", Patterns.basic) }
+    let(:email) { RubyTokenizer::Tokenizer.new("genghis.khan@gmail.com, leslie_knope@yahoo.com", Patterns.basic) }
+    let(:url) { RubyTokenizer::Tokenizer.new("www.robots.com", Patterns.basic) }
+    let(:end_hyphen) { RubyTokenizer::Tokenizer.new("doctor who-", Patterns.basic) }
+    let(:end_underscore) { RubyTokenizer::Tokenizer.new("doctor who_", Patterns.basic) }
 
     it "should be an Array" do
       expect(token.tokenize).to be_a_kind_of Array
@@ -98,7 +98,7 @@ describe RubyTokenizer do
   end
 
   describe "#rank" do
-    let(:sample) { RubyTokenizer::Tokenizer.new('Searching searching searching is is a common requirement in web applications.') }
+    let(:sample) { RubyTokenizer::Tokenizer.new('Searching searching searching is is a common requirement in web applications.', Patterns.basic) }
     it "should be an Array" do
       expect(sample.rank).to be_a_kind_of Array
     end
