@@ -12,6 +12,6 @@ class Format
       row << ['word', 'count']
       self.word_count.each { |word, count| row << [word, count]}
     end
-    puts "--- CSV has been created ----"
+    puts "--- CSV has been created and saved to #{File.expand_path File.dirname(__FILE__)}----"
   end
 end
