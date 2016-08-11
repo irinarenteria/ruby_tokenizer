@@ -7,14 +7,6 @@
 
 RubyTokenizer is a simple language processing command-line tool, modeled loosely after Apache Solr's [Classic Tokenizer](https://cwiki.apache.org/confluence/display/solr/Tokenizers). It performs low-level tokenization through word-segmentation by filtering whitespaces, punctuation marks, parantheses and other special characters, and returns the top 10 most frequent words in a body of text. At the moment it's only available for English texts in UTF-8, Unicode 6.3 format. All results are case-insensitive.
 
-Future updates:
-
-1. Having a FileConverter class analyze the file input and convert it to UTF-8
-
-2. Output word count to CSV file
-
-3. Use [OptionParser](http://ruby-doc.org/stdlib-2.3.0/libdoc/optparse/rdoc/OptionParser.html) to provide more command-line interaction (e.g. adjust tokenization level)
-
 ## Installation
 
 To use this tool, you need to have Ruby installed. You can find more detailed instructions here: http://www.ruby-lang.org/en/downloads/
