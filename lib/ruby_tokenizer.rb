@@ -1,4 +1,5 @@
 require "ruby_tokenizer/version"
+require 'format/output'
 
 module RubyTokenizer
 
@@ -13,16 +14,23 @@ a TokenizerOutput class.
 =end
 
   class Tokenizer
-    attr_reader :text, :level
+    attr_reader :text, :level, :flag
 
-    def initialize(text, level)
+    def initialize(text, level, *flag)
       @text = text
       @level = level
+      @flag = flag
     end
 
     def rank
       ranked = Hash[self.frequency.sort.sort_by { |word| word[1] }.reverse]
-      ranked.first(10)
+      word_count = ranked.first(10)
+      if self.flag.empty?
+        return word_count
+      else
+        new_output = Format(word_count)
+        return new_output.output_to_csv
+      end
     end
 
     protected
