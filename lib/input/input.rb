@@ -14,8 +14,11 @@ The methods in this module parse all command-line arguments according to 4 scena
       self.get_input
     elsif input[0] == '-csv'
       output = []
+
       flag = '-csv'
+      input.delete_at(0)
       file = self.read_file(input)
+
       return output.push(file, flag)
     else
       self.read_file(input)
