@@ -16,10 +16,9 @@ The methods in this module parse all command-line arguments according to 4 scena
       output = []
 
       flag = '-csv'
-      input.delete_at(0)
-      file = self.read_file(input)
+      file = input.shift
 
-      return output.push(file, flag)
+      return output.push(self.read_file(file), flag)
     else
       self.read_file(input)
     end
