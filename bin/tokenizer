@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'ruby_tokenizer'
-require 'input/input.rb'
+require 'input/input'
 require "patterns/patterns"
 require 'pry'
 
