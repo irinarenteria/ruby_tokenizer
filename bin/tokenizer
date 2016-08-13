@@ -1,12 +1,12 @@
 #!/usr/bin/env ruby
 
 require 'ruby_tokenizer'
-require 'input/input.rb'
+require 'input/input'
 require "patterns/patterns"
 require 'pry'
 
 input = InputStream.analyze(ARGV)
-output = RubyTokenizer::Tokenizer.new(input, Patterns.basic)
+output = RubyTokenizer::Tokenizer.new(input[1], Patterns.basic, input[0])
 top_ten = output.rank
 
 Pry::ColorPrinter.pp(top_ten)

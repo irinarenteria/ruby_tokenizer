@@ -6,14 +6,19 @@ The methods in this module parse all command-line arguments according to 4 scena
   2) Single file input will output the text
   3) Multiple file input will concatenate and output the text
   4) Invalid file path/format will raise an error and stop the program
-Next steps: Separate file processing responsibilities into a FileProcessor class,
-which would also include a method for encoding the input to UTF-8.
 =end
 
   def self.analyze(input)
     if input.empty?
       self.prompt("--- Please input your text below ----")
       self.get_input
+    elsif input[0] == '-csv'
+      output = []
+
+      flag = '-csv'
+      file = input.shift
+
+      return output.push(self.read_file(file), flag)
     else
       self.read_file(input)
     end

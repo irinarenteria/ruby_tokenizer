@@ -3,7 +3,7 @@ require 'ruby_tokenizer'
 require "patterns/patterns"
 
 describe RubyTokenizer do
-  let(:token) { RubyTokenizer::Tokenizer.new('Searching records is a common requirement in web applications.', Patterns.basic) }
+  let(:token) { RubyTokenizer::Tokenizer.new('Searching records is a common requirement in web applications.', Patterns.basic, '-csv') }
   RubyTokenizer::Tokenizer.send(:public, *RubyTokenizer::Tokenizer.protected_instance_methods)
 
   describe "#version" do
@@ -19,6 +19,14 @@ describe RubyTokenizer do
 
     it "contains a String" do
       expect(token.text).to be == 'Searching records is a common requirement in web applications.'
+    end
+
+    it "contains a pattern" do
+      expect(token.level).to be == Patterns.basic
+    end
+
+    it "contains a flag" do
+      expect(token.flag[0]).to be == '-csv'
     end
   end
 
